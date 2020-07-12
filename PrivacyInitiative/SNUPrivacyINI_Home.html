@@ -1,0 +1,1091 @@
+<!--- start of script !--->
+<!DOCTYPE html>
+<HTML lang="en"><!-- Master branch !-->
+<BODY><!-- Submaster branch !-->
+<head><!-- external and internal resources needed for page !-->
+<meta>
+	<meta charset="UTF-16"> <!-- Page encoding main !-->
+</meta> <!-- End of meta character set section !-->
+<!-- .ico !--><!-- 021!--<!-- Favicon !--><link rel="icon" href="Graphics/Favicon/ICO/PRIVACYMOVEMENTICON_PROJECT.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .js !--> <!-- 02 !--<!-- JavaScript file 1 !--><!--<script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .js !--><!-- 03 !--><!-- JavaScript file !--><!--<script type="text/javascript" src="Sourcebase_SNUScriptStarter_V1.00.js"></script><!-- The full JavaScript SNU sheet, modify to your liking !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 04 !--<!-- Stylesheet 1 !--><!--<link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 05 !--<!-- Stylesheet 2 !--><!--<link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 06 !--<!-- Stylesheet 3 !--><!--<link rel="stylesheet" type="text/css" href="Sourcebase_SNUScriptStarter_V1.01.css"> <!-- Make sure to modify this CSS to your liking !--><!-- The stylesheet for the white text !--><!-- external resource !-->
+<!-- Start of Metadata !-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Viewport detection for average computer, and mobile !-->
+<meta name="description" content="The SNU privacy initiative - Take back your privacy!"><!-- Description search engines display when searching the site via search !-->
+<meta name="keywords" content="SNU, PrivacyINI, privacy, homepage, listing, keyword6, keyword7, keyword8"><!-- Search keywords (don't put too many, anywhere between 1 and 8 is fine) !-->
+<meta name="author" content="SeanWallaWalla/SNU, SNU.net, SeanPM, Sean Patrick Myrick">
+<!-- End of Metadata !-->
+</head>
+<HEAD>
+<!-- Stylesheet 1 !-->
+<style type="text/css" lang="en">
+/* Grid system */
+.grid-container {
+	display: grid;
+	grid-column-gap: 50px;
+	grid-template-columns: auto auto auto;
+	background-color: #2196F3;
+	padding: 10px;
+}
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+</style>
+<!-- Stylesheet 2 !-->
+<style type="text/css" lang="en">
+/* Transparent boxes */
+div.background {
+	background: url(klematis.jpg) repeat;
+	border: 2px solid black;
+}
+div.transbox {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+	border: 1px solid black;
+	opacity: 0.6;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+div.transbox p {
+	margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+	font-weight: bold;
+	color: #ffffff;
+}
+</style>
+<!-- Stylesheet 3 /!-->
+<style type="text/css" lang="en">
+/* Sidebar */
+body {
+	margin: 0;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 16%;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+li a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+li a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+}
+</style>
+<!-- Stylesheet 4 !-->
+<style type="text/css" lang="en">
+/* Topbar */
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: #333;
+	overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+/* Dropdown */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<!-- Stylesheet 5 !-->
+<style type="text/css" lang="en">
+/* Headings */
+H1 {
+	color: white;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 15px;
+	font-size: large;
+	font-size: 150%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+H2 {
+	color: white;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+H3 {
+	color: white;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+H4 {
+	color: white;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+H5 {
+	color: white;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+H6 {
+	color: white;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 6 !-->
+<style type="text/css" lang="en">
+/* Dividers, paragraphs */
+HR {
+	color: black;
+	font-family: "Liberation Serif";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+p {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 7 !-->
+<style type="text/css" lang="en">
+/* Other rich text */
+i {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+u {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+b {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+s {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+sub {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+sup {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 8 !-->
+<style type="text/css" lang="en">
+/* Details and summary */
+details {
+	color: black;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+summary {
+	color: black;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 9 !-->
+<style type="text/css" lang="en">
+/* Progress bar 
+/* Option 1 */
+progress {
+	display:inline-block;
+	width:190px;
+	height:20px;
+	padding:15px 0 0 0;
+	margin:0;
+	background:none;
+	border: 0;
+	border-radius: 15px;
+	text-align: left;
+	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:11px;
+	width:150px;
+	margin:0 auto;
+	background-color: #CCC;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:11px;
+	margin:0px -10px 0 0;
+	background: #F70;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress:after {
+	margin:-26px 0 0 -7px;
+	padding:0;
+	display:inline-block;
+}
+/* Option 2 */
+#progress {
+	background: #333;
+	border-radius: 13px;
+	height: 20px;
+	width: 300px;
+	padding: 3px;
+}
+#progress:after {
+	content: '';
+	display: block;
+	background: orange;
+	width: 50%;
+	height: 100%;
+	border-radius: 9px;
+}
+/* Option 3 */
+#progressbar {
+	background-color: black;
+	border-radius: 13px;
+	/* (height of inner div) / 2 + padding */
+	padding: 3px;
+}
+#progressbar>div {
+	background-color: orange;
+	width: 40%;
+	/* Adjust with JavaScript */
+	height: 20px;
+	border-radius: 10px;
+}
+/* Option 4 */
+/* Step 1 */
+progress, /* All HTML5 progress enabled browsers */
+{
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+/* Step 2 */
+/* IE10 */
+progress {
+	color: black;
+}
+/* Firefox */
+progress::-moz-progress-bar {
+	background: black;
+}
+/* Chrome */
+progress::-webkit-progress-value {
+	background: black;
+}
+/* Step 3 */
+progress[value^="9"]::-moz-progress-bar {
+background-color : red;
+}
+</style>
+<!-- Stylesheet 10 !-->
+<style type="text/css" lang="en">
+/* rich text section 2 */
+p {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+P {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+b {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+B {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+u {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+U {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+s {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+S {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+i {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+I {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+sub {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+SUB {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+sup {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+SUP {
+	color: white;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 11 !-->
+<style type="text/css" lang="en">
+/* form section */
+form {
+	color: white;
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+FORM {
+	color: white;
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+/* specialized button hyperlink section */
+a {
+	color: blue;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+A {
+	color: blue;
+	font-family: "Tahoma";
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 12 !-->
+<style type="text/css" lang="en">
+/* WebGL compatibility layer */
+canvas {
+	border: 2px solid black;
+	background-color: black;
+}
+video {
+	display: none;
+}
+/* Gallery */
+div.gallery {
+	border: 1px solid #ccc;
+}
+div.gallery:hover {
+	border: 1px solid #777;
+}
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+* {
+	box-sizing: border-box;
+}
+.responsive {
+	padding: 0 6px;
+	float: left;
+	width: 24.99999%;
+}
+@media only screen and (max-width: 700px) {
+	.responsive {
+width: 49.99999%;
+margin: 6px 0;
+}
+}
+@media only screen and (max-width: 500px) {
+	.responsive {
+	width: 100%;
+	}
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+</style>
+<!-- Stylesheet 13 !-->
+<style type="text/css" lang="en">
+/* Border image */
+#borderimg { 
+	border: 10px solid transparent;
+	padding: 15px;
+	border-image: url(border.png) 30 round;
+}
+</style>
+<!-- Stylesheet 14 !-->
+<style type="text/css" lang="en">
+/* Scripting tags - syntax highlights for various languages, testing with Python 3 syntax */
+scri-none { /* Scri-none stands for non-identified script syntax. This text should show black if something is not written correctly, such as PRiNT instead of print */
+	font-family: "courier";
+	color: black;
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+scri-blue1 {
+	font-family: "courier";
+	color: blue;
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+scri-string1 {
+	font-family: "courier";
+	color: silver;
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+scri-comment1 {
+	font-family: "courier";
+	color: green;
+	/*
+	font-size: 12.5px;
+	font-size: medium;
+	font-size: 125%
+	*/
+	text-shadow: 0px 0px #000000;
+}
+</style>
+<!-- Stylesheet 15 !-->
+<style type="text/css" lang="en">
+/* Start of script */
+/* Default phrase tag CSS */
+/* Contains the default CSS for the default 6 HTML5 phrase tags */
+/* Tag list:
+1 | kbd (keyboard input)
+2 | em (emphasized text) (not to be confused with the pixel measurement metric (1em = 16px)
+3 | strong (strong text)
+4 | code (computer code/script)
+5 | var (variable (text))
+6 | samp (sample output)
+*/
+/* Start of tag list */
+/* KBD (Keyboard input) */
+kbd {
+	font-family: monospace;
+}
+/* HTML Sample:
+---
+ <kbd>Keyboard input</kbd> 
+---
+*/
+/* EM (Emphasized text) */
+em {
+	font-style: italic;
+}
+/* HTML Sample:
+---
+<em>Emphasized text</em>
+---
+*/
+/* STRONG (ttrong text) */
+strong {
+	font-weight: bold;
+}
+/* HTML Sample:
+---
+<em>Emphasized text</em>
+---
+*/
+/* CODE (Computer code/script) */
+code {
+	font-family: monospace;
+}
+/* HTML Sample:
+---
+ <code>A piece of computer code</code> 
+---
+*/
+/* VAR (Variable (text)) */
+var {
+	font-style: italic;
+}
+/* HTML Sample:
+---
+<var>Variable</var>
+---
+*/
+/* SAMP (Sample output) */
+samp {
+	font-family: monospace;
+}
+/* HTML Sample:
+---
+<samp>Sample output from a computer program</samp>
+---
+*/
+/* End of tag list */
+/* File version history
+V1: Created January 1st 2020
+*/
+/* File info:
+Size: 01,.366 bytes (01,.366 Kilobytes)
+Line count: 077
+Language: CSS3 (Cascade Style Sheets)
+Line indenting: UNIX(LF)
+Encoding: UTF-8 (With no UTF-8 characters)
+/* End of script */
+</style>
+<!-- Stylesheet 16 !-->
+<style type="text/css" lang="en">
+blockquote {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 40px;
+	margin-right: 40px;
+	color: white;
+}
+HR.blank {
+	border: 10px solid green;
+	border-radius: 5px;
+}
+</style>
+<!-- End of stylesheets !-->
+<?php
+// PHP section
+// "Echo"
+echo ("Hello World"); // Output: Hello World
+/* Or
+* "Print"
+*/
+print ("Hello World"); // Output: Hello World
+// Variable list
+$piSimple = "3.14";
+$HelloWorldStr = "Hello World";
+$HelloworldStr = "Hello world";
+$Int2__16 = "65536"; // My #1 memorized power of 2
+// End of variable list
+// Var list
+var x = 0; // X Coordinate
+var y = 0; // Y Coordinate
+var z = 0; // Z Coordinate
+var a = 0; // A Coordinate [4D MODE ONLY]
+// End ov Var list
+// Int list
+int testInt1 = "101";
+// End of int list
+// float list
+float decimal1 = "1.01";
+// End of float list
+// End of PHP section
+?>
+<script type="text/JavaScript" lang="en">
+// Start of script
+// Page JavaScript console
+console.log("SNU web console for [browser]");
+console.log("The SNU privacy initiative homepage console");
+console.log(">>>");
+// End of script
+</script>
+<!-- Ruby support !-->
+<ruby type="text/ruby" lang="ja">
+
+</ruby>
+<!--
+<ruby>
+<rt>
+<rp></rp>
+</rt>
+</ruby>
+!-->
+<!-- XML support !-->
+<xml type="text/xml" lang="en">
+
+</xml>
+<!-- Divider !-->
+<TITLE lang="en">SNU Privacy Initiative - Take back your privacy with SNU!</TITLE><!-- Page title (remember to change this) !-->
+</HEAD>
+<!-- End of embedded scripting !-->
+<BODY BGCOLOR="NAVY"> <!-- Background color !-->
+<!-- Brief color list
+Black (000000)
+<BODY BGCOLOR="BLACK">
+White (FFFFFF)
+<BODY BGCOLOR="WHITE">
+Cyan (00FFFF)
+<BODY BGCOLOR="CYAN">
+Navy (000080)
+<BODY BGCOLOR="NAVY">
+Dark grey (333333)
+<BODY BGCOLOR="DARKGRAY">
+Light grey (777777)
+<BODY BGCOLOR="LIGHTGRAY">
+Red (FF0000)
+<BODY BGCOLOR="RED">
+Green (00FF00)
+<BODY BGCOLOR="GREEN">
+Turquiose (40E0D0)
+<BODY BGCOLOR="TURQUIOSE">
+Silver (######)
+<BODY BGCOLOR="SILVER">
+!-->
+<BODY BACKGROUND=".png"><!-- Background image !--> <!-- Allowed formats: .png .jpg .jpe .jif .gif .bmp .dib .tif .tiff !-->
+<!-- Top navigation bar !-->
+<div class="topnav">
+<a class="active" href="">[ ⚖ SNU Privacy INI ⚖ ]</a><!-- Try to make the name stretch over the entire sidebar to near perfection !-->
+<a href="#PLACEHOLDER">(</a>
+<a href="about:blank">❎ Exit SNU</a><!-- empty link !--><!-- This button always exits the current SNU tab. This should be a built-in page on every browser (guaranteed to work on Chromium/Google Chrome and Mozilla Firefox !-->
+<a href="../2D/!SNU2DSTART.html">⛺ <!-- Home page of mode !-->Home</a>
+<a href="#PLACEHOLDER">)</a>
+<i><a href="SNUPrivacyINI_Home.html">The SNU Privacy initiative</a></i>
+<!-- Make sure it stays on a single line for all displays (until I can get a scrollbar in) try testing on displays with 1336 pixel width like I am !-->
+</div>
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+<!-- <HR> !-->
+<!-- Page title section can go here as well if desired !-->
+<!-- <HR> !-->
+<img src="Graphics/Favicon/ICO/PRIVACYMOVEMENTICON_PROJECT.ico" alt="Logo_Profile_Icon" width="225" height="225">
+<HR>
+<li lang="en"><a class="active" href="#home">[⚖ SNU Privacy INI ⚖]</a></li>
+<HR>
+<details>
+	<summary><li lang="en"><a href="#EXPLORE">[Index of the SNU privacy initiative]</a></li></summary>
+	<li><HR></li>
+	<nav>
+	<li lang="en">* Section 1 (Articles on privacy)</li>
+	<li lang="en">* Section 2 (Page navigation)</li>
+	</nav>
+	</details>
+	<li lang="en"><HR></li>
+	<details><summary><li id="">Articles on privacy</a></li></summary>
+	<!-- 01 !--><li lang="en"><a href="Articles/GoogleChromium_HallOfShame.html">📖 The Chromium hall of shame (for sites that refuse to support browsers other than Google Chrome and other Chromium based browsers)</a></li>
+	<!-- 02 !--><li lang="en"><a href="Articles/Reddit_ANTIFANG_Home.html">📖 r/antiFANG (Anti-FaceBook, Amazon/Apple, Netflix, Google) a subreddit about the crimes of the tech giants and how to get away from them</a></li>
+	<!-- 03 !--><li lang="en"><a href="Articles/DuckDuckGo_SearchEngine.html">📖 DuckDuckGo - The search engine that doesn't track you</a></li>
+	<!-- 04 !--><li lang="en"><a href="Articles/Ecosia_SearchEngine.html">📖 Ecosia - The search engine that saves the environment with each search</a></li>
+	<!-- 05 !--><li lang="en"><a href="Articles/Degoogling_Home.html">📖 Degoogling - take Google out of your life. Learn methods of taking Google out of your life and Degoogling</a></li>
+	<!-- 06 !--><li lang="en"><a href="Articles/Degoogling_SeanPM.html">📖 SeanPM Degoogles - How the creator of SNU is taking Google out of his life</a></li>
+	<!-- 07 !--><li lang="en"><a href="Articles/Windows10_Telemetry.html">📖 Windows 10 and Telemetry - Why Windows 10 is not safe for privacy</a></li>
+	<!-- 08 !--><li lang="en"><a href="Articles/ListOfPrivacyOffenders.html">📖 List of privacy offenders - A list of companies that don't respect the users privacy</a></li>
+	<!-- 09 !--><li lang="en"><a href="Articles/1984_InTheModernDay.html">📖 nineteen eighty four in the modern day - The similarities between the modern day and the dystopian novel 1984 (by George Orwell)</a></li>
+	<!-- 10 !--><li lang="en"><a href="Articles/ClosedSourceAndPrivacy.html">📖 Closed source/proprietary software and privacy - is it really that safe?</a></li>
+	<!-- 11 !--><li lang="en"><a href="Articles/EndToEndEncryption_WhyIt'sImportant.html">📖 End to End Encryption (E2EE) - Why it's important</a></li>
+	<!-- 12 !--><li lang="en"><a href="Articles/TheSNU_DegooglingGuide.html">📖 The SNU Guide to DeGoogling - Take Google out of your life</a></li>
+	<!-- 13 !--><li lang="en"><a href="Articles/Zoom_and_Privacy.html">📖 Zoom and privacy - Why Zoom isn't safe for privacy or security</a></li>
+	<!-- 14 !--><li lang="en"><a href="Articles/COVID-19_Pandemic-and-Privacy.html">📖 COVID-19 pandemic and privacy - The world is taking advantage of the pandemic</a></li>
+	<!-- More articles will go here when new articles are created and when the page gets an update !-->
+	</details>
+	<li lang="en"><HR></li>
+	<details><summary><li id="">Sections of this page</li></summary>
+	<li lang="en"><a href="#Top">Top of the page</a></li>
+	<li lang="en"><a href="#Mission">Privacy Initiative mission</a></li>
+	<li lang="en"><a href="#ArticleListing">Article listing</a></li>
+	<li lang="en"><a href="#SnapshotSection">Snapshot section</a></li>
+	<li lang="en"><a href="#Bottom">Bottom of the page</a></li>
+	</details>
+	<li lang="en"><HR></li>
+	<li lang="en">Copyright SeanWallaWalla 2015-2019</li>
+	<li lang="en">Copyleft SeanWallaWalla 2019-2020</li>
+	<li lang="en">SNU 2018-2020</li>
+	<HR>
+</ul>
+<!-- End of sidebar and topbar section !-->
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<!-- Page content starts here !-->
+<HR>
+<!-- File info (default)
+Line indent style: Unix (LF)
+Languages: HTML5, HTML4, CSS3, JS1.8, RUBY2.6, PHP 7.3
+Derived from: Sourcebase_SNUScriptStarter (version 1.07)
+!-->
+<section>
+		<!-- Plans from 1.14.2020 (after development period)
+		Google Chrome hall of shame (list of websites that are Chromium only) to start you off:
+		Microsoft Teams
+		Kast
+		I have some screenshots, but I won't be able to find them quickly. It may take me a while to find them
+		-
+		Page about r/antiFANG (Include your banner fanart)
+		Page about closed source and privacy
+		Page about DuckDuckGo and Ecosia
+		Page about Degoogling, how to Degoogle, and Seans Degoogling process (down to 2!)
+		Page about Windows 10 and telemetry
+		Page of privacy offenders (Google, Microsoft, Amazon, FaceBook, etc)
+		
+		* Reference SNU being an alternate
+		* This project can be done on Wednesday, but if there are time issues, it can be extended to Thursday, Friday, Saturday, or even Sunday
+		!-->
+<H1 lang="en" id="Top">SNU Privacy initiative</H1>
+<H2 lang="en">Welcome to the SNU privacy initiative. SNU is strongly committed to user privacy. It is getting harder and harder to get privacy these days. We hope to fix this.</H2>
+<H2 lang="en">This page currently serves as an archive for our articles written on privacy from January 15th 2020 to January 17th 2020. I started the initiative late into SNU site development.</H2>
+<section>
+<HR>
+<section>
+<H1 lang="en" id="Mission">The SNU Privacy Initiative Mission</H1>
+<p lang="en">The goal of the SNU Privacy Initiative is to give awareness to mass-surveillance and privacy invasion, and how deadly and evil it really is. To raise awareness, we can get people to do something to preserve privacy.</p>
+<p lang="en">Articles are written to spread awareness and get people to take action.</p>
+<img src="Graphics/Favicon/ICO/PRIVACYMOVEMENTICON_PROJECT.ico" alt="Cannot load Favicon" width="128" height="128">
+<p lang="en">The Favicon of the privacy initiative resembles an eye. This eye resembles surveillance. Notice how the eye has growing cracks on it? This is to symbolize our mission: when people are aware and do something, we can break mass-surveillance, and end privacy invasions on a global scale.</p>
+<p lang="en">View image as:</p>
+<p lang="en">| <button><a href="Graphics/Favicon/ICO/PRIVACYMOVEMENTICON_PROJECT.ico">View as .ico file</a></button> | <button><a href="Graphics/Favicon/Draft/PRIVACYMOVEMENTICON_PROJECT.png">View as .png file</a></button> |</p>
+<p lang="en">Unfortunately, part of the icon was made with MS-PAINT, as at the time, I had no easy alternate to it. I tried using a more advanced program (GIMP) but I couldn't get it right. The rest of the image is finalized in GIMP.</p>
+<p lang="en">| <button><a href="Graphics/Favicon/Draft/PRIVACYEYE.png">View the cracked eye sketch (.png file)</a></button> | <button><a href="Graphics/Favicon/Project/PRIVACYMOVEMENTICON_PROJECT.xcf">View GIMP project file (.xcf file)</a></button> |</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="ArticleListing">Article listing (14)</H1>
+<!-- 01 !--><H2 lang="en"><button><a href="Articles/GoogleChromium_HallOfShame.html">📖 The Chromium hall of shame (for sites that refuse to support browsers other than Google Chrome and other Chromium based browsers)</a></button></H2>
+<!-- 02 !--><H2 lang="en"><button><a href="Articles/Reddit_ANTIFANG_Home.html">📖 r/antiFANG (Anti-FaceBook, Amazon/Apple, Netflix, Google) a subreddit about the crimes of the tech giants and how to get away from them</a></button></H2>
+<!-- 03 !--><H2 lang="en"><button><a href="Articles/DuckDuckGo_SearchEngine.html">📖 DuckDuckGo - The search engine that doesn't track you</a></button></H2>
+<!-- 04 !--><H2 lang="en"><button><a href="Articles/Ecosia_SearchEngine.html">📖 Ecosia - The search engine that saves the environment with each search</a></button></H2>
+<!-- 05 !--><H2 lang="en"><button><a href="Articles/Degoogling_Home.html">📖 Degoogling - take Google out of your life. Learn methods of taking Google out of your life and Degoogling</a></button></H2>
+<!-- 06 !--><H2 lang="en"><button><a href="Articles/Degoogling_SeanPM.html">📖 SeanPM Degoogles - How the creator of SNU is taking Google out of his life</a></button></H2>
+<!-- 07 !--><H2 lang="en"><button><a href="Articles/Windows10_Telemetry.html">📖 Windows 10 and Telemetry - Why Windows 10 is not safe for privacy</a></button></H2>
+<!-- 08 !--><H2 lang="en"><button><a href="Articles/ListOfPrivacyOffenders.html">📖 List of privacy offenders - A list of companies that don't respect the users privacy</a></button></H2>
+<!-- 09 !--><H2 lang="en"><button><a href="Articles/1984_InTheModernDay.html">📖 nineteen eighty four in the modern day - The similarities between the modern day and the dystopian novel 1984 (by George Orwell)</a></button></H2>
+<!-- 10 !--><H2 lang="en"><button><a href="Articles/ClosedSourceAndPrivacy.html">📖 Closed source/proprietary software and privacy - is it really that safe?</a></button></H2>
+<!-- 11 !--><H2 lang="en"><button><a href="Articles/EndToEndEncryption_WhyIt'sImportant.html">📖 End to End Encryption (E2EE) - Why it's important</a></button></H2>
+<!-- 12 !--><H2 lang="en"><button><a href="Articles/TheSNU_DegooglingGuide.html">📖 The SNU Guide to DeGoogling - Take Google out of your life</a></button></H2>
+<!-- 13 !--><H2 lang="en"><button><a href="Articles/Zoom_and_Privacy.html">📖 Zoom and privacy - Why Zoom isn't safe for privacy or security</a></button></H2>
+<!-- 14 !--><H2 lang="en"><button><a href="Articles/COVID-19_Pandemic-and-Privacy.html">📖 COVID-19 pandemic and privacy - The world is taking advantage of the pandemic</a></button></H2>
+<!-- 15 !--><H2 lang="en"><button><a href="#ComingSoon">More articles coming soon</a></button></H2>
+<H2 lang="en"><button><a href="Articles/">Article repository</a></button></H2>
+</section>
+<HR>
+<section>
+<details><summary><H2 lang="en" id="SnapshotSection">View older versions of this page<a href="#SnapshotSection">¶</a></H2></summary>
+<H3 lang="en">Snapshots 1 to 20</H3>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot1.html">Snapshot 1 (January 15th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot2.html">Snapshot 2 (January 17th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot3.html">Snapshot 3 (February 24th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot4.html">Snapshot 4 (April 13th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot5.html">Snapshot 5 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot6.html">Snapshot 6 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot7.html">Snapshot 7 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot8.html">Snapshot 8 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot9.html">Snapshot 9 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot10.html">Snapshot 10 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot11.html">Snapshot 11 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot12.html">Snapshot 12 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot13.html">Snapshot 13 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot14.html">Snapshot 14 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot15.html">Snapshot 15 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot16.html">Snapshot 16 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot17.html">Snapshot 17 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot18.html">Snapshot 18 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot19.html">Snapshot 19 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot20.html">Snapshot 20 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot21.html">Snapshot 21 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot22.html">Snapshot 22 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot23.html">Snapshot 23 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot24.html">Snapshot 24 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot25.html">Snapshot 25 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot26.html">Snapshot 26 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot27.html">Snapshot 27 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot28.html">Snapshot 28 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot29.html">Snapshot 29 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot30.html">Snapshot 30 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot31.html">Snapshot 31 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot32.html">Snapshot 32 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot33.html">Snapshot 33 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot34.html">Snapshot 34 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot35.html">Snapshot 35 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot36.html">Snapshot 36 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot37.html">Snapshot 37 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot38.html">Snapshot 38 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot39.html">Snapshot 39 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot40.html">Snapshot 40 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot41.html">Snapshot 41 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot42.html">Snapshot 42 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot43.html">Snapshot 43 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot44.html">Snapshot 44 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot45.html">Snapshot 45 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot46.html">Snapshot 46 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot47.html">Snapshot 47 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot48.html">Snapshot 48 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot49.html">Snapshot 49 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot50.html">Snapshot 50 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot51.html">Snapshot 51 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot52.html">Snapshot 52 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot53.html">Snapshot 53 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot54.html">Snapshot 54 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot55.html">Snapshot 55 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot56.html">Snapshot 56 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot57.html">Snapshot 57 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot58.html">Snapshot 58 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot59.html">Snapshot 59 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="SNUPrivacyINI_Home_Snapshot60.html">Snapshot 60 (No date)</a></button></H4>
+</details>
+</section>
+<HR>
+<section>
+<header>
+<!-- Bottom of page !-->
+<H1 lang="en" id="Bottom">You have reached the bottom of this page.</H1>
+</header>
+</section>
+<HR>
+<footer>
+<!--<p lang="en">Footer content here</p>!-->
+<p lang="en">Footer not yet set up.</p>
+<!-- Footer can be pinned or unpinned, pinned footer scripting is unavailable right now !-->
+</footer>
+<!-- Bottom script (filler) !-->
+</HR>
+</BODY>
+<!-- </BODY> !-->
+<!-- This page was built off the basis of SNU Sourcebase HTML scriptstarter 1.08 - December 30th 2019 build !-->
+</HTML>
+<!-- Bottom script (filler) !-->
+<!--- end of script !--->
+<!-- Blank space for compiler, with random indents !-->
+ 
+  
+   
+	
